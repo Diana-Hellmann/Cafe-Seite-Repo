@@ -1,5 +1,4 @@
 *{
-  /*überall testweise box auskommentiert, weil es hier für alle gesetzt wird*/
   box-sizing: border-box;
 }
 /* Grundlayout */
@@ -8,15 +7,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /*box-sizing: border-box;*/
 }
-
-
 nav{
   background-color: rgb(172, 82, 9);
-  /*testweise weg*/
-  /*padding: 1rem;*/
- /* text-align: center;*/
  /*für Hamburger*/
   display: none;
   flex-direction: column;
@@ -24,7 +17,6 @@ nav{
   position: fixed;
   width: 30%;
   height: 100%;
- 
 }
 nav a{
   text-decoration: none;
@@ -39,38 +31,30 @@ nav a.active{
   text-decoration-thickness: 0.1rem;
 }
 nav ul{
- /* padding: 1rem;*/
   display: flex;
   flex-wrap: wrap;
 }
 nav li{
   list-style: none;
- 
 }
 /*Ham Menü*/
 nav.open{
   /*auf Klick Navi anzeigen*/
   display: flex;
-  /*
-  flex-direction: column;*/
- 
 }
-/*Design für mobile Navi, Menüpunkte sollen nicht so weit rechts sein und nicht mittendrin brechen*/
+/*Design für mobile Navi*/
 nav.open ul{
   width: 100%;
   align-items: flex-start;
   flex-direction: column;
-  /*Test*/
   padding: 0;
 }
 nav.open li{
   width: 100%;
 }
-
 nav.open a{
   display: block;
 }
-
 /*Ham Btn*/
 #hamburger{
   display: flex;
@@ -96,28 +80,19 @@ nav.open a{
   /*für Linien*/
   background-color: rgb(253, 238, 220);
   border-radius: 0.2rem;
-
 }
-
-
-
 /* Der gesamte Container für header, main und aside */
 .main-container {
   display: flex;
   flex-direction: column;
   flex: 1; /* Nimmt den restlichen Platz ein */
-  /*box-sizing: border-box;*/
-  
 }
-
 /* Header und Main nebeneinander */
 .content {
   display: flex;
   flex-direction: column;
-  /*wenn es sich auf den vorhandenen Platz ausdehnen soll, statt die natürliche Größe behalten*/
   flex: 1; /* Lässt aside neben main sein */
   background-color: rgb(255, 220, 155);
-  /*box-sizing: border-box;*/
 }
 .font{
   color: rgb(63, 32, 2);
@@ -126,9 +101,6 @@ nav.open a{
 header {
   padding: 1rem;
   text-align: center;
-  /*box-sizing: border-box;*/
-
-
 }
 h1{
   margin: 2rem 1rem 0 1rem;
@@ -138,7 +110,6 @@ h2{
   margin: 0 0 1.5rem 0;
   font-size: 2.5rem;
 }
-
 /* Main Content */
 main {
   padding: 1rem;
@@ -163,38 +134,28 @@ main {
   text-decoration: none;
   padding: 0.15rem 1rem 0.3rem;
   margin: 1rem 2rem;
-  
   width: 9rem;
   display: inline-block;
-  
 }
-
 .btn-container{
   margin: 2rem;
   overflow: hidden;
 }
-
-
 /* Aside neben dem Main */
 aside {
   background-color: rgb(224, 147, 101);
   padding: 1rem;
   flex-shrink: 0; /* Verhindert, dass aside kleiner wird */
-  /*overflow: hidden;*/
 }
 aside p{
   background-color: rgb(253, 238, 220);
   padding: 1.5rem 1rem;
   margin: 1rem 2rem;
-  
-  /*width: 13rem;
-  height: 18rem;*/
   font-size: larger;
 }
 .container-color{
   background-color: rgb(253, 238, 220);
   overflow: hidden;
-  /*box-sizing: border-box;*/
 }
 /*Karte*/
 .karte, .angebot, .ueber-uns{
@@ -216,14 +177,9 @@ div.karte-layout{
   display: flex;
   flex-direction: column;
   padding: 1.5rem 3rem;
-
-
 }
 .karte-layout p{
-/*je nach default muss es vllt explizit auf 0 gesetzt werden*/
-  /*margin: 0 6rem;*/
   font-size: x-large;
-
 }
 /*Ueber uns*/
 .ueber-uns .container-color{
@@ -233,7 +189,6 @@ div.karte-layout{
 }
 .img-ueber-uns{
   width: 80%;
-  /*height: auto;*/
   margin: 0rem 1rem 1rem;
 }
 .ueber-uns p{
@@ -244,8 +199,6 @@ div.karte-layout{
 .seitentitel{
   font-size: xx-large;
   text-decoration: underline;
-
-
   margin: 2rem 0rem 3rem;
 }
 .angebot p{
@@ -258,27 +211,20 @@ div.karte-layout{
   flex-direction: column;
   align-items: center;
   text-align: left;
- /* box-sizing: border-box;*/
   min-height: 100vh;
   gap: 1rem;
-
 }
 .angebot h4{
   font-size: x-large;
-  
   margin: 2rem 1rem 1rem;
-
 }
 .angebot img{
   width: 70%;
 }
-
 .angebot *{
  flex-shrink: 1;
  min-height: 0;
  min-width: 0;
- /*berücksichtigt padding und margin in der Berechnung und Platzverteilung, sodass die keinen overflow verursachen können*/
- /*box-sizing: border-box;*/
  flex-basis: auto;
 }
 
@@ -293,7 +239,6 @@ aside {
   padding: 1rem;
   width: 25%;
   flex-shrink: 0; /* Verhindert, dass aside kleiner wird */
-  /*overflow: hidden;*/
 }
 aside p{
   background-color: rgb(253, 238, 220);
@@ -306,11 +251,8 @@ aside p{
 nav{
   background-color: rgb(172, 82, 9);
   padding: 1rem;
- /* text-align: center;*/
  /*Hamburger rückgängig*/
- /*testen, war block, für leichteres Layout test mit Flex*/
   display: flex;
-  /*flex-direction: column;*/
 
   /*Anpassungen um Desktop Navi explizite Werte zu setzen, die ich in mobile festgelegt habe
   und die hier nicht rein sollen*/
@@ -318,13 +260,6 @@ nav{
   flex-direction: row;
   width: auto;
 }
-/*testweise weg*/
-/*nav ul{
-
-   display: flex;
-   flex-wrap: wrap;
- 
- }*/
 /*Ham Btn*/
 #hamburger{
   display: none;
@@ -343,7 +278,6 @@ div.karte-layout{
 .karte-layout p{
   margin: 0 6rem;
   font-size: x-large;
-
 }
 .img-karte{
   width: 30%;
